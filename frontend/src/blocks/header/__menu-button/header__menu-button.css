@@ -1,0 +1,20 @@
+.header__menu-button {
+  width: 30px;
+  height: 30px;
+  background-color: #000000;
+  border: none;
+  background-image: url(../../../images/menu-button.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.header__menu-button:hover {
+  opacity: 0.6;
+}
+
+@media screen and (min-width: 768px) {
+  .header__menu-button {
+    visibility: hidden;
+  }
+}

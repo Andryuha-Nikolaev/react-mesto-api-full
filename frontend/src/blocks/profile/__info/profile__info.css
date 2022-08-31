@@ -1,0 +1,16 @@
+.profile__info {
+  display: grid;
+  max-width: 536px;
+  grid-template-columns: 1fr 24px;
+  gap: 16px 18px;
+  grid-template-areas:
+  "name edit-button"
+  "caption caption";
+}
+
+@media screen and (max-width: 767px) {
+  .profile__info {
+    margin-top: 26px;
+    gap: 14px 15.25px;
+  }
+}

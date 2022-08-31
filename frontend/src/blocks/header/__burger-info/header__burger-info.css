@@ -1,0 +1,10 @@
+.header__burger-info {
+  padding: 40px 0 40px 0;
+  display: none;
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-bottom: 1px solid rgba(54, 54, 54, .7);
+  box-sizing: border-box;
+}

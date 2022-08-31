@@ -1,0 +1,11 @@
+.popup__signup-image {
+  width: 120px;
+  height: 120px;
+  margin-top: 26px;
+  margin-bottom: 32px;
+}
+
+@media screen and (max-width: 767px) {.popup__signup-image {
+  margin-top: 25px;
+  margin-bottom: 40px;
+}}

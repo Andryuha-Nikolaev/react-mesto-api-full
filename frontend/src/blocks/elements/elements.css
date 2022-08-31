@@ -1,0 +1,18 @@
+.elements {
+  margin: 0 auto;
+  max-width: 880px;
+  min-height: calc(100vh - 480px);
+}
+
+@media screen and (max-width: 1023px) {
+  .elements {
+    padding: 0 19px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .elements {
+    padding: 0 19px;
+    min-height: calc(100vh - 560px);
+  }
+}

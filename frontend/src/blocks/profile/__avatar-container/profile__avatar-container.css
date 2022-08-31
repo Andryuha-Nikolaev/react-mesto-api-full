@@ -1,0 +1,19 @@
+.profile__avatar-container {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .profile__avatar-container {
+    margin-right: 0;
+  }
+}
+
+.profile__avatar-container:hover > .profile__avatar-button {
+  visibility: visible;
+  opacity: 1;
+}

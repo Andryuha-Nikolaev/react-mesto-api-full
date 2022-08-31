@@ -1,0 +1,17 @@
+.profile__avatar-button {
+  background-color: rgba(0, 0, 0, 0.8);
+  background-image: url('../../../images/avatar-button.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+}

@@ -1,0 +1,17 @@
+.form__text {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+@media (max-width: 767px) {
+  .form__text {
+    margin-bottom: 65px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}

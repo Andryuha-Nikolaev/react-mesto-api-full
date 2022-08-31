@@ -1,0 +1,4 @@
+.form__button-save_loading {
+  pointer-events: none;
+  opacity: 0.6;
+}

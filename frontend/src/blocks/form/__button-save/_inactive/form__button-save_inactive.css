@@ -1,0 +1,8 @@
+.form__button-save_inactive {
+  pointer-events: none;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  color: #000000;
+  opacity: 0.2;
+}

@@ -1,0 +1,8 @@
+.elements__container {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 21px;
+  align-items: center;
+  min-height: 79px;
+}
