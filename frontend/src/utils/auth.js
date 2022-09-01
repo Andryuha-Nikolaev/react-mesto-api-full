@@ -1,6 +1,7 @@
 import checkResponse from "./utils";
 
-export const BASE_URL = 'https://auth.nomoreparties.co';
+// export const BASE_URL = 'https://auth.nomoreparties.co';
+export const BASE_URL = 'https://api.domainname.andrey.nomoredomains.sbs';
 
 export const register = (email, password) => {
   return fetch(`${BASE_URL}/signup`, {

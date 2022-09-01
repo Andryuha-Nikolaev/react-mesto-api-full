@@ -30,6 +30,7 @@ function App() {
   const [currentUser, setCurrentUser] = useState({});
   const [cards, setCards] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [isAddPhoto, setIsAddPhoto] = useState(false);
   const [profileEmail, setProfileEmail] = useState('');
   const [removedCardId, setRemovedCardId] = useState('');
   const history = useHistory();
@@ -42,9 +43,9 @@ function App() {
         .then(res => {
           if (res) {
             setIsLoggedIn(true)
-            history.push('/')
-            setProfileEmail(res.data.email)
+            setProfileEmail(res.email)
           }
+          history.push('/')
         })
         .catch(err => {
           console.log(err);
@@ -69,7 +70,7 @@ function App() {
         })
       }
 
-  }, [isLoggedIn]);
+  }, [isLoggedIn, isAddPhoto]);
 
   function closeAllPopups() {
     setIsEditProfilePopupOpen(false)
@@ -139,6 +140,7 @@ function App() {
 
   function handleAddPlaceSubmit(data) {
     setIsLoading(true);
+    setIsAddPhoto(true);
     api.postCard(data).then((newCard) => {
       setCards([newCard, ...cards])
       closeAllPopups();
@@ -148,6 +150,7 @@ function App() {
       })
       .finally(() => {
         setIsLoading(false);
+        setIsAddPhoto(false);
       });
   }
 
@@ -158,7 +161,7 @@ function App() {
         if (res) {
           setIsSuccess(true);
           setIsInfoTooltipPopupOpen(true);
-          history.push('./sign-in');
+          history.push('./signin');
         }
       })
       .catch(err => {
@@ -189,7 +192,7 @@ function App() {
   const handleSignOut = () => {
     setIsLoggedIn(false);
     localStorage.removeItem('jwt');
-    history.push('/sign-in');
+    history.push('/signin');
   };
 
 
@@ -201,11 +204,11 @@ function App() {
             onSignOut={handleSignOut}
             userEmail={profileEmail} />
           <Switch>
-            <Route path="/sign-in">
+            <Route path="/signin">
               <Login onAuthorize={handleAuthorize} />
             </Route>
 
-            <Route path="/sign-up">
+            <Route path="/signup">
               <Register onRegister={handleRegister} />
             </Route>
 

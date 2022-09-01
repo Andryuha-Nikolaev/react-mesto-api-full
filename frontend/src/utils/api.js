@@ -76,9 +76,10 @@ class Api {
 
 const api = new Api({
   // baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-42',
-  baseUrl: 'http://domainname.andrey.nomoredomains.sbs',
+  baseUrl: 'https://api.domainname.andrey.nomoredomains.sbs',
   headers: {
-    authorization: '6634f396-3fbd-4a4f-858c-8c72fb67fb49',
+    // authorization: '6634f396-3fbd-4a4f-858c-8c72fb67fb49',
+    Authorization: `Bearer ${localStorage.getItem('jwt')}`,
     'Content-Type': 'application/json'
   }
 });
