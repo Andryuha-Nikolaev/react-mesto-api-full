@@ -33,7 +33,11 @@ class Api {
   getUserInfo() {
     return fetch(`${this._url}/users/me`, {
       method: 'GET',
-      headers: this._headers
+      headers: {
+        // authorization: '6634f396-3fbd-4a4f-858c-8c72fb67fb49',
+        Authorization: `Bearer ${localStorage.getItem('jwt')}`,
+        'Content-Type': 'application/json'
+      }
     }).then((res) => checkResponse(res))
   }
 
@@ -41,7 +45,11 @@ class Api {
   getCards() {
     return fetch(`${this._url}/cards`, {
       method: 'GET',
-      headers: this._headers
+      headers: {
+        // authorization: '6634f396-3fbd-4a4f-858c-8c72fb67fb49',
+        Authorization: `Bearer ${localStorage.getItem('jwt')}`,
+        'Content-Type': 'application/json'
+      }
     }).then((res) => checkResponse(res))
   }
 
