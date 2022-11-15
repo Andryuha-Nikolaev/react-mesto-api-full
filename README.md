@@ -26,4 +26,4 @@
 + Express
 + MongodDB
   
-Публичный IP-адрес сервера - 51.250.64.139 Домен - https://domainname.andrey.nomoredomains.sbs/ Домен сервера - https://api.domainname.andrey.nomoredomains.sbs/
+Публичный IP-адрес сервера - 51.250.64.139 Домен - https://domainname.andrey.nomoredomains.sbs/ Домен сервера -   https://api.domainname.andrey.nomoredomains.sbs/
